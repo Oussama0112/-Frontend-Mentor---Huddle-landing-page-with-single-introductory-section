@@ -1,0 +1,191 @@
+/* variable set */
+:root{
+    --bg-clr: hsl(257, 40%, 49%);
+    --alt-bg-clr: hsl(300, 69%, 71%);
+    --ff-h: 'Poppins', sans-serif;
+    --p-clr:#f3f3f3;
+    --main-trans:0.4s;
+
+}
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  p{
+    font-size: 13px;
+  }
+
+/* container--set */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* my utilities */
+  .flex__col{
+    display: flex;
+    flex-direction: column; 
+  }
+  .flex{
+    display: flex;
+    gap: 1rem;
+  }
+  .main__flex{
+    display: flex;
+  }
+  @media (max-width:767px) {
+    .main__flex{
+      flex-direction: column;
+    }
+  }
+
+  /* my main css */
+  body{
+    background-color: var(--bg-clr);
+    background-image: url('images/bg-desktop.svg');
+    background-size: cover;
+  }
+  @media (max-width:767px) {
+    body{
+      background-image: url('images/bg-mobile.svg');
+    }
+  }
+  .container .heading{
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+
+  }
+  main{
+
+  }
+  main > *{
+    flex: 1;
+  }
+  main .images {
+
+
+  }
+  main .images img{
+
+  }
+  .contenue{
+    padding: 2rem 1.5rem 3.5rem 2rem;
+    gap: 1rem;
+
+  }
+  @media (max-width:767px) {
+    .contenue{
+      padding-block: 0;
+      text-align: center;
+      margin-top: 2rem;
+  
+    }
+  }
+  .contenue h2{
+    text-transform: capitalize;
+    color: white;
+    font-family: var(--ff-h);
+    letter-spacing: -1px;
+  }
+  .contenue p{
+    color: var(--p-clr);
+  }
+  .button{
+    width: fit-content;
+    text-transform: capitalize;
+    padding: 0.5rem 2.525rem;
+    border-radius: 100vw;
+    transition: var(--main-trans);
+    cursor: pointer;
+    border: none;
+  }
+  .button:hover{
+    background-color: var(--alt-bg-clr);
+  }
+  .media{
+    justify-content: flex-end;
+    margin-block: 2rem 3rem;
+    }
+  @media (max-width:767px) {
+    .media{
+      justify-content: center;
+    }
+    .button{
+      margin: 0 auto;
+    }
+  }
+  .media span{
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+  }
